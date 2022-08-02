@@ -86,7 +86,7 @@ def build_microros(*args, **kwargs):
     print("Configuring {} with transport {}".format(board, microros_transport))
 
     if framework == 'mbed':
-        env.Replace(CCFLAGS = env['CCFLAGS'][1:-3])
+        env.Replace(CCFLAGS = list(filter(lambda f: f != "-includembed_config.h", env['CCFLAGS'][:-3])))
 
     cmake_toolchain = library_builder.CMakeToolchain(
         main_path + "/platformio_toolchain.cmake",
