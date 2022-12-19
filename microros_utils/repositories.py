@@ -110,7 +110,7 @@ class Sources:
             Repository("micro_ros_utilities", "https://github.com/micro-ROS/micro_ros_utilities", "humble"),
             Repository("rcutils", "https://github.com/micro-ROS/rcutils", "humble"),
             Repository("micro_ros_msgs", "https://github.com/micro-ROS/micro_ros_msgs", "humble"),
-            Repository("rmw-microxrcedds", "https://github.com/micro-ROS/rmw-microxrcedds", "humble"),
+            Repository("rmw-microxrcedds", "https://github.com/fictionlab/rmw_microxrcedds", "destructors_fix"),
             Repository("rosidl_typesupport", "https://github.com/micro-ROS/rosidl_typesupport", "humble"),
             Repository("rosidl_typesupport_microxrcedds", "https://github.com/micro-ROS/rosidl_typesupport_microxrcedds", "humble"),
             Repository("rosidl", "https://github.com/ros2/rosidl", "humble"),
