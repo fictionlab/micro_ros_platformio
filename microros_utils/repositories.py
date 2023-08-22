@@ -67,6 +67,11 @@ class Repository:
 
 class Sources:
     dev_environments = {
+         'humble-fictionlab': [
+            Repository("ament_cmake", "https://github.com/ament/ament_cmake", "humble", "1.3.5"),
+            Repository("ament_package", "https://github.com/ament/ament_package", "humble", "0.14.0"),
+            Repository("ament_cmake_ros", "https://github.com/ros2/ament_cmake_ros", "humble", "0.10.0"),
+        ],
          'humble': [
             Repository("ament_cmake", "https://github.com/ament/ament_cmake", "humble"),
             Repository("ament_lint", "https://github.com/ament/ament_lint", "humble"),
@@ -102,6 +107,25 @@ class Sources:
     }
 
     mcu_environments = {
+        'humble-fictionlab': [
+            Repository("micro-CDR", "https://github.com/eProsima/micro-CDR", "humble", "v2.0.1"),
+            Repository("Micro-XRCE-DDS-Client", "https://github.com/eProsima/Micro-XRCE-DDS-Client", "humble", "v2.4.1"),
+            Repository("rcl", "https://github.com/fictionlab/rcl", "humble", "fictionlab-v1"),
+            Repository("rclc", "https://github.com/ros2/rclc", "humble", "4.0.2"),
+            Repository("rcutils", "https://github.com/fictionlab/rcutils", "fictionlab-v1"),
+            Repository("rmw_microxrcedds", "https://github.com/micro-ROS/rmw_microxrcedds.git", "3.0.2"),
+            Repository("rosidl_typesupport", "https://github.com/fictionlab/rosidl_typesupport", "fictionlab-v1"),
+            Repository("rosidl_typesupport_microxrcedds", "https://github.com/micro-ROS/rosidl_typesupport_microxrcedds", "3.0.1"),
+            Repository("rosidl", "https://github.com/ros2/rosidl", "3.1.5"),
+            Repository("rmw", "https://github.com/ros2/rmw", "6.1.1"),
+            Repository("rcl_interfaces", "https://github.com/ros2/rcl_interfaces", "1.2.1"),
+            Repository("rosidl_defaults", "https://github.com/ros2/rosidl_defaults", "1.2.0"),
+            Repository("unique_identifier_msgs", "https://github.com/ros2/unique_identifier_msgs", "2.2.1"),
+            Repository("common_interfaces", "https://github.com/ros2/common_interfaces", "4.2.3"),
+            Repository("rmw_implementation", "https://github.com/ros2/rmw_implementation", "2.8.2"),
+            Repository("rcl_logging", "https://github.com/ros2/rcl_logging", "2.3.1"),
+            Repository("ros2_tracing", "https://github.com/ros2/ros2_tracing.git", "4.1.1"),
+        ],
         'humble': [
             Repository("micro-CDR", "https://github.com/eProsima/micro-CDR", "humble", "ros2"),
             Repository("Micro-XRCE-DDS-Client", "https://github.com/eProsima/Micro-XRCE-DDS-Client", "humble", "ros2"),
@@ -110,7 +134,7 @@ class Sources:
             Repository("micro_ros_utilities", "https://github.com/micro-ROS/micro_ros_utilities", "humble"),
             Repository("rcutils", "https://github.com/micro-ROS/rcutils", "humble"),
             Repository("micro_ros_msgs", "https://github.com/micro-ROS/micro_ros_msgs", "humble"),
-            Repository("rmw-microxrcedds", "https://github.com/fictionlab/rmw_microxrcedds", "destructors_fix"),
+            Repository("rmw-microxrcedds", "https://github.com/micro-ROS/rmw_microxrcedds.git", "humble"),
             Repository("rosidl_typesupport", "https://github.com/micro-ROS/rosidl_typesupport", "humble"),
             Repository("rosidl_typesupport_microxrcedds", "https://github.com/micro-ROS/rosidl_typesupport_microxrcedds", "humble"),
             Repository("rosidl", "https://github.com/ros2/rosidl", "humble"),
@@ -194,6 +218,28 @@ class Sources:
     }
 
     ignore_packages = {
+        'humble-fictionlab': [
+            'rcl_yaml_param_parser',
+            'rclc_examples',
+            'test_msgs',
+            'rosidl_typesupport_microxrcedds_cpp_tests',
+            'rosidl_typesupport_microxrcedds_c_tests',
+            'rosidl_typesupport_microxrcedds_test_msg',
+            'rosidl_typesupport_introspection_tests',
+            'rosidl_typesupport_introspection_tests',
+            'rosidl_cli',
+            'rosidl_typesupport_introspection_c',
+            'sensor_msgs_py',
+            'test_rmw_implementation',
+            'rcl_logging_noop',
+            'rcl_logging_spdlog',
+            'test_tracetools',
+            'tracetools_test',
+            'test_tracetools_launch',
+            'tracetools_trace',
+            'tracetools_read',
+            'tracetools_launch'
+        ],
         'humble': ['rcl_logging_log4cxx', 'rcl_logging_spdlog', 'rcl_yaml_param_parser', 'rclc_examples'],
         'galactic': ['rcl_logging_log4cxx', 'rcl_logging_spdlog', 'rcl_yaml_param_parser', 'rclc_examples'],
         'rolling': ['rcl_logging_log4cxx', 'rcl_logging_spdlog', 'rcl_yaml_param_parser', 'rclc_examples'],
