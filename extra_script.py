@@ -154,7 +154,7 @@ def update_env():
 from SCons.Script import COMMAND_LINE_TARGETS
 
 # Do not build library on clean_microros target or when IDE fetches C/C++ project metadata
-if set(["clean_microros", "_idedata", "idedata"]).isdisjoint(set(COMMAND_LINE_TARGETS)):
+if set(["clean_microros", "__idedata", "_idedata", "idedata"]).isdisjoint(set(COMMAND_LINE_TARGETS)):
     build_microros()
 
 update_env()
